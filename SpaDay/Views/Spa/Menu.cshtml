@@ -12,14 +12,18 @@
 <div id="clientProfile">
     <h3>Client profile</h3>
     <p>@ViewBag.person</p>
+    
 </div>
 <div id="servicesMenu">
 
     <h5>Facial Treatments</h5>
-    <p>Your //TODO: pass the skintype value in here// skin type is best suited to the follow facial types:</p>
+    <p>Your @ViewBag.skintypeskin type is best suited to the follow facial types:</p>
     
     <ul>
-        //TODO: iterate through appropriate facial treatments
+        @foreach (string facial in ViewBag.appropriateFacials)
+        {
+            <li>@facial</li>
+        }
     </ul>
 
     <h5>Nail Services</h5>
