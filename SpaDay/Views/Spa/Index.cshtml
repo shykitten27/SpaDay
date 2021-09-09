@@ -3,7 +3,9 @@
 *@
 @{
 }
-<form method='post' asp-action="menu">  @*control returns to menu action method in spacontroller returns Menu.cshtml*@
+<link rel="stylesheet" href="~/css/site.css" />
+<form method='post' asp-action="menu">
+    @*control returns to menu action method in spacontroller returns Menu.cshtml*@
 
     Name:
     <br>
@@ -28,11 +30,31 @@
         <option value='both'>Both</option>
     </select>
     <br>
+    <table>
+        <tr>
+            <td>
+                <div class='rednail'>
+                    <p class="nailtext">Racing Red</p>
+                </div>
+            </td>
+            <td>
+                <div class='pinknail'>
+                    <p class="nailtext">Pale Pink</p>
+                </div>
+            </td>
+            <td>
+                <div class='nudenail'>
+                    <p class="nailtext">Nude</p>
+                </div>
+            </td>
+            <td>
+                <div class='pearlnail'>
+                    <p class="nailtext">Pearl</p>
+                </div>
+            </td>
+        </tr>
+    </table>
 
     <input type='submit' value='Submit'>
 
 </form>
-
-<div class="nail" style="background-color: red; width: 50px; height: 50px">
-    Racing Red.
-</div>
