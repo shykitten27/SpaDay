@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Welcome @ViewBag.user.Name</h1>
+<li>
+    <a href="@Url.Action("Index", "Spa")" class="elements">
+        <span>Spa</span>
+    </a>
+</li>
+
+<div>
+    <p>ViewBag.user.Email;</p>
+    <p>ViewBag.user.DateJoined;</p>    
+</div>

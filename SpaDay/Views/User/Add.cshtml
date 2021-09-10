@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form method='post' asp-action="/user">
+    @*control returns to add action method in usercontroller returns Ass.cshtml*@
+
+    Name:
+    <br>
+    <input type='text' name='name'>
+    <br>
+
+    Username:
+    <br>
+    <input type='text' name='username'>
+    <br>
+
+    Email:
+    <br>
+    <input type='email' name='email'>
+    <br>
+
+    Password:
+    <br>
+    <input type='password' name='password'>
+    <br>
+
+    Verify Password:
+    <br>
+    <input type='password' name='verify'>
+    <br>
+
+    <input type='submit' value='Submit'>
+
+</form>
