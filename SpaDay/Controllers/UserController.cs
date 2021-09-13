@@ -14,22 +14,26 @@ namespace SpaDay.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("spa/user/add")]
         public IActionResult Add()
         {
             return View();
         }
 
+        [HttpPost]
+        [Route("/user")]
         public IActionResult SubmitAddUserForm(User newUser, string verify)
         {
             // add form submission handling code here
-            if (ViewBag.password == ViewBag.verify)
+            if (newUser.Password == verify)
             {
-                ViewBag.username = newUser;
+                ViewBag.username = newUser.Username;
+                /*ViewBag.password = newUser.Password;
+                ViewBag.email = newUser.Email;*/
                 return View("Index");
             }
-            else 
+            else
             {
                 return View();
             }
