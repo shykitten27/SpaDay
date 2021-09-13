@@ -6,6 +6,10 @@
 <form method='post' asp-action="/user">
     @*control returns to add action method in usercontroller returns Ass.cshtml*@
 
+    <div class="errormessage">
+        <p>@ViewBag.errormessage</p>
+    </div>
+
     Name:
     <br>
     <input type='text' name='name' />
@@ -13,12 +17,12 @@
 
     Username:
     <br>
-    <input type='text' value="@ViewBag.username" name='username' /> 
+    <input type='text' value="@ViewBag.username" name='username' />
     <br>
 
     Email:
     <br>
-    <input type='email' value="@ViewBag.email" name='email' />  
+    <input type='email' value="@ViewBag.email" name='email' />
     <br>
 
     Password:

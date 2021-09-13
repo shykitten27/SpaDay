@@ -35,7 +35,7 @@ namespace SpaDay.Controllers
             }
             else
             {
-                ViewBag.error = "Passwords do not match. Please try again.";
+                ViewBag.errormessage = "Passwords do not match. Please try again.";
                 ViewBag.username = newUser.Username; //repopulate form
                 ViewBag.email = newUser.Email;       //repopulate form
                 return View("Add"); //return to Add.cshtml
