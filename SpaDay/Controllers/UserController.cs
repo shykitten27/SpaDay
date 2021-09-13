@@ -22,7 +22,7 @@ namespace SpaDay.Controllers
         }
 
         [HttpPost]
-        [Route("/user")]
+        [Route("spa/user/add")]
         public IActionResult SubmitAddUserForm(User newUser, string verify)
         {
             // add form submission handling code here
@@ -30,12 +30,15 @@ namespace SpaDay.Controllers
             {
                 ViewBag.username = newUser.Username;
                 /*ViewBag.password = newUser.Password;
-                ViewBag.email = newUser.Email;*/
-                return View("Index");
+                ViewBag.email = newUser.Email;*/ //not necessary 
+                return View("Index"); //return to User/Index.cshtml
             }
             else
             {
-                return View();
+                ViewBag.error = "Passwords do not match. Please try again.";
+                ViewBag.username = newUser.Username; //repopulate form
+                ViewBag.email = newUser.Email;       //repopulate form
+                return View("Add"); //return to Add.cshtml
             }
         }
     }
