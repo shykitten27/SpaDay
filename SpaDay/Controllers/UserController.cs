@@ -15,14 +15,14 @@ namespace SpaDay.Controllers
         }
 
         [HttpGet]
-        [Route("spa/user/add")]
+        [Route("/user/add")]
         public IActionResult Add()
         {
             return View();
         }
 
         [HttpPost]
-        [Route("spa/user/add")]
+        [Route("/user")]
         public IActionResult SubmitAddUserForm(User newUser, string verify)
         {
             // add form submission handling code here
