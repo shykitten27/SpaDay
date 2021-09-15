@@ -15,7 +15,7 @@ namespace SpaDay.Controllers
         }
 
         [HttpGet]
-        [Route("/user/add")]
+        //[Route("/user/add")]
         public IActionResult Add()
         {
             return View();
@@ -28,7 +28,7 @@ namespace SpaDay.Controllers
             // add form submission handling code here
             if (newUser.Password == verify)
             {
-                ViewBag.username = newUser.Username;
+                ViewBag.user = newUser; //the newUser is the entire ViewBag.user not a piece of the user class
                 /*ViewBag.password = newUser.Password;
                 ViewBag.email = newUser.Email;*/ //not necessary 
                 return View("Index"); //return to User/Index.cshtml
