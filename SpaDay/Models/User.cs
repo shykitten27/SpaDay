@@ -21,5 +21,10 @@ namespace SpaDay.Models
             Password = password;
             DateJoined = DateTime.Now;
         }
+
+        public User()
+        {
+
+        }
     }
 }

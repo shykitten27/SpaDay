@@ -15,7 +15,7 @@ namespace SpaDay.Controllers
         }
 
         [HttpGet]
-        //[Route("/user/add")]
+        [Route("/user/add")]
         public IActionResult Add()
         {
             return View();
