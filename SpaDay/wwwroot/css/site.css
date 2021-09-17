@@ -69,6 +69,41 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+.nailtext {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rednail {
+    position: relative;
+    width: 50px;
+    height: 75px;
+    border-radius: 50px / 75px;
+    background: red;
+}
+
+.pinknail {
+    width: 50px;
+    height: 75px;
+    border-radius: 50px / 75px;
+    background-color: pink;
+}
+
+.nudenail {
+    width: 50px;
+    height: 75px;
+    border-radius: 50px / 75px;
+    background-color: rosybrown;
+}
+
+.pearlnail {
+    width: 50px;
+    height: 75px;
+    border-radius: 50px / 75px;
+    background-color: peachpuff;
+}
 .errormessage {
     color: red
 }
