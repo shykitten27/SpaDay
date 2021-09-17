@@ -3,14 +3,15 @@
 *@
 @{
 }
-<h1>Welcome @ViewBag.username</h1>
-<li>
+<h1>Welcome, @ViewBag.user.Name</h1>
+
     <a href="@Url.Action("Index", "Spa")" class="elements">
         <span>Spa</span>
     </a>
-</li>
+<br /><br />
+
 
 <div>
-    <p>ViewBag.user.Email;</p>
-    <p>ViewBag.user.DateJoined;</p>    
+    <p>Email: @ViewBag.user.Email</p>
+    <p>Date Joined: @ViewBag.user.DateJoined</p>    
 </div>
