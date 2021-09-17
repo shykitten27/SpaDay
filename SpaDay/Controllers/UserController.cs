@@ -29,8 +29,6 @@ namespace SpaDay.Controllers
             if (newUser.Password == verify)
             {
                 ViewBag.user = newUser; //the newUser is the entire ViewBag.user not a piece of the user class
-                /*ViewBag.password = newUser.Password;
-                ViewBag.email = newUser.Email;*/ //not necessary 
                 return View("Index"); //return to User/Index.cshtml
             }
             else

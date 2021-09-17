@@ -13,18 +13,18 @@ namespace SpaDay.Models
         public string Password { get; set; }
         public DateTime DateJoined { get; }
 
+        public User()
+        {
+            DateJoined = DateTime.Now;
+        }
+
         public User(string name, string username, string email, string password)
         {
             Name = name;
             Username = username;
             Email = email;
             Password = password;
-            DateJoined = DateTime.Now;
-        }
-
-        public User()
-        {
-
+            
         }
     }
 }
