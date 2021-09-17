@@ -3,25 +3,58 @@
 *@
 @{
 }
-<form method='post'>
+<link rel="stylesheet" href="~/css/site.css" />
+<form method='post' asp-action="menu">
+    @*control returns to menu action method in spacontroller returns Menu.cshtml*@
+
+    Name:
+    <br>
+    <input type='text' name='name'>
+    <br>
+
     Skin type:
-    <br>    
+    <br>
     <select name='skintype'>
-        <option value='oily'>Oily</option>    
-        <option value='combination'>Combination</option>    
-        <option value='normal'>Normal</option>    
-        <option value='dry'>Dry</option>    
+        <option value='oily'>Oily</option>
+        <option value='combination'>Combination</option>
+        <option value='normal'>Normal</option>
+        <option value='dry'>Dry</option>
     </select>
     <br>
 
-    Manicure or Pedicure?
-    <br>    
+    Manicure or Pedicure or Both?
+    <br>
     <select name='manipedi'>
-        <option value='manicure'>Manicure</option>    
-        <option value='pedicure'>Pedicure</option>      
+        <option value='manicure'>Manicure</option>
+        <option value='pedicure'>Pedicure</option>
+        <option value='both'>Both</option>
     </select>
     <br>
-    
-    <input type='submit' value='Submit'>    
-     
+    <table>
+        <tr>
+            <td>
+                <div class='rednail'>
+                    <p class="nailtext">Racing Red</p>
+                </div>
+            </td>
+            <td>
+                <div class='pinknail'>
+                    <p class="nailtext">Pale Pink</p>
+                </div>
+            </td>
+            <td>
+                <div class='nudenail'>
+                    <p class="nailtext">Nude</p>
+                </div>
+            </td>
+            <td>
+                <div class='pearlnail'>
+                    <p class="nailtext">Pearl</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <input type='submit' value='Submit'>
+
 </form>
