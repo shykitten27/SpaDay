@@ -11,9 +11,10 @@ namespace SpaDay.Models
         public string Username { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public DateTime DateJoined { get; }
+        public DateTime DateJoined { get; } = DateTime.Now;
 
-        public User()
+        //constructor not necessary - MVC mapping handles, add default value in DateJoined property
+/*        public User()
         {
             DateJoined = DateTime.Now;
         }
@@ -25,6 +26,6 @@ namespace SpaDay.Models
             Email = email;
             Password = password;
             
-        }
+        }*/
     }
 }
