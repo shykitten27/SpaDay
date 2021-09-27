@@ -15,8 +15,7 @@ namespace SpaDay.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            User newUser = new User();
-            return View(newUser);
+            return View();
         }
 
         public IActionResult Add()
@@ -26,21 +25,28 @@ namespace SpaDay.Controllers
         }
 
         [HttpPost]
-        /*[Route("/user")]*/ //no longer necessary
+        [Route("/user")]
         public IActionResult SubmitAddUserForm(AddUserViewModel addUserViewModel)
         {
             if (ModelState.IsValid)
             {
-                User newUser = new User
+                if (addUserViewModel.Password == addUserViewModel.VerifyPassword)
                 {
-                    Username = addUserViewModel.Username,
-                    Email = addUserViewModel.Email,
-                    Password = addUserViewModel.Password
-                };
-                return Redirect("/Index");
+                    User newUser = new User
+                    {
+                        Username = addUserViewModel.Username,
+                        Email = addUserViewModel.Email,
+                        Password = addUserViewModel.Password
+                    };
+                    return View("Index", newUser);
+                }
+                else
+                {
+                    ViewBag.error = "Passwords do not match! Try again!";
+                    return View("Add", addUserViewModel);
+                }
             }
-            //else
-            return View(addUserViewModel);
+            return View("Add", addUserViewModel);
         }
     }
 }
