@@ -20,6 +20,7 @@ namespace SpaDay.Controllers
 
         public IActionResult Add()
         {
+            //pass instance of viewmodel
             AddUserViewModel addUserViewModel = new AddUserViewModel();
             return View(addUserViewModel);
         }
